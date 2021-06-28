@@ -4162,7 +4162,7 @@ class PGDialect(default.DefaultDialect):
             index = indexes[idx_name]
             if col is not None:
                 index["cols"][col_num] = col
-            if not has_idx:
+            if not has_idx and idx_key:
                 idx_keys = idx_key.split()
                 # "The number of key columns in the index, not counting any
                 # included columns, which are merely stored and do not
